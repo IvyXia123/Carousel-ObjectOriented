@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css"></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul, li, img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .leftBtn, .rightBtn {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+            top: 50%;
+            margin-top: -15px;
+        }
+
+        .leftBtn {
+            left: 10px;
+        }
+
+        .rightBtn {
+            right: 10px;
+        }
+
+        .circles {
+            position: absolute;
+            bottom: 10px;
+            left: 100px;
+            list-style: none;
+        }
+
+        .circles li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: orange;
+            margin-right: 10px;
+        }
+
+        .circles li.cur {
+            background-color: red;
+        }
+
+        #lunbo2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="lunbo1"></div>  <!--轮播1-->
+<div id="lunbo2"></div>  <!--轮播2-->
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="Carousel.js"></script>
+<script type="text/javascript">
+
+    //轮播1：
+    new Carousel({
+        "id": "lunbo1",
+        "images": [
+            "images/1.png",
+            "images/2.png",
+            "images/3.png",
+            "images/4.png"
+        ],
+        "width": 700,
+        "height": 540,
+        "animateDuration": 300,
+        "interval": 1000
+    });
+
+    //轮播2：
+    new Carousel({
+        "id": "lunbo2",
+        "images": [
+            "images/5.png",
+            "images/6.png",
+            "images/7.png",
+            "images/8.png"
+        ],
+        "width": 500,
+        "height": 340,
+        "animateDuration": 300,
+        "interval": 1000
+    });
+</script>
+</body>
+</html>
